@@ -14,7 +14,7 @@ node {
     The Build ${env.BUILD.NUMBER} has been successfully triggered, Code has been deployed to Dev Environment
 
     Regards,
-    DevOps Team""", cc: '', from: '', replyTo: '', subject: echo "Job Number ${env.JOB_NAME} success", to: 'ravisinghrajput005@gmail.com'
+    DevOps Team""", cc: '', from: '', replyTo: '', subject: 'echo Job Number ${env.JOB_NAME} success', to: 'ravisinghrajput005@gmail.com'
   }
   stage ('Slack-Notifiction')
   {
