@@ -16,5 +16,12 @@ node {
     Regards,
     DevOps Team''', cc: '', from: '', replyTo: '', subject: 'Jenkins Build', to: 'ravisinghrajput005@gmail.com'
   }
+  stage ('Slack-Notifiction')
+  {
+    slackSend baseUrl: 'https://hooks.slack.com/services/', 
+    channel: '#Web-Development', color: 'good', 
+    message: 'Welcome to Jenkins Slack channel', 
+    tokenCredentialId: 'slack-notify'
+  }
 
 } 
