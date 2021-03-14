@@ -10,9 +10,11 @@ node {
   stage ('Email Notification') 
   {
     mail bcc: '', body: '''Hi Dev Team,
-    The build ${env.BUILD.NUMBER} has been successfully triggered, Code has been deployed to Dev Environment
-    Regards,
-    DevOps Team''', cc: '', from: '', replyTo: '', subject: 'Build', to: 'ravisinghrajput005@gmail.com'     
+
+The Build ${env.BUILD.NUMBER} has been successfully triggered, Code has been deployed to Dev Environment
+
+Regards,
+DevOps Team''', cc: '', from: '', replyTo: '', subject: 'Build', to: 'ravisinghrajput005@gmail.com'
   }
 
 } 
