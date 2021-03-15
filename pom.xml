@@ -24,6 +24,12 @@
 		<sonar.host.url>http://13.232.5.182:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password>
+		
+		<sonar.buildString>
+                -Dsonar.projectKey=Web-Development \
+                -Dsonar.host.url=http:10.128.0.11:9000 \
+                -Dsonar.login=23c9b97df71dc03f12e9ca6479f50c2a57c50835
+                </sonar.buildString>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
