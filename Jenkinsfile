@@ -9,7 +9,7 @@ node {
   }
   stage('SonarQube Analysis') {
       withSonarQubeEnv('Sonar') { 
-      sh "${mvnHome}/bin/mvn sonar:sonar"
+      sh 'mvn sonar:sonar'
       }
     }
   stage ('Email Notification') 
