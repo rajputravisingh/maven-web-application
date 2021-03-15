@@ -3,10 +3,7 @@ node {
   {
     git 'https://github.com/rajputravisingh/maven-web-application.git'
   }
-  stage ('Complile - Package')
-  {
-    sh 'mvn package'
-  }
+  
   stage('Sonar Analysis'){
     withSonarQubeEnv('SonarCloud'){
     //def mvnHome = tool 'maven3.3'
@@ -15,8 +12,23 @@ node {
     sh 'sleep 1m'
 
   }
-
+}
+  stage ('Complile - Package')
+  {
+    sh 'mvn clean package'
+    archiveArtifacts 'target/maven-web-application.war'
   }
+  
+  stage ('Test')
+  {
+    sh 'mvn test'
+  }
+  
+  stage ('Dev-Deploy')
+  {
+    sh 'sudo cp /target/maven-web-application.war /var/lib/tomcat8/webapps'
+  }
+
   stage ('Email Notification') 
   {
     mail bcc: '', body: '''Hi Dev Team,
