@@ -7,11 +7,16 @@ node {
   {
     sh 'mvn package'
   }
-  stage('SonarQube Analysis') {
-      withSonarQubeEnv('Sonar') { 
-      sh 'mvn sonar:sonar'
-      }
-    }
+  stage('Sonar Analysis'){
+    withSonarQubeEnv('SonarCloud'){
+    //def mvnHome = tool 'maven3.3'
+    //sh "'${mvnHome}'/bin/mvn sonar:sonar"
+    sh 'mvn sonar:sonar'
+    sh 'sleep 1m'
+
+  }
+
+  }
   stage ('Email Notification') 
   {
     mail bcc: '', body: '''Hi Dev Team,
