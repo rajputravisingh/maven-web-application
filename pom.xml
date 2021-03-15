@@ -22,10 +22,11 @@
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
 		
-		<sonar.projectKey>Web-Development</sonar.projectKey>
-		<sonar.host.url>http://http:10.128.0.11:9000/</sonar.host.url>
-		<sonar.login>23c9b97df71dc03f12e9ca6479f50c2a57c50835</sonar.login>
-		<sonar.password>admin</sonar.password>
+		
+                <sonar.projectKey>rajputravisingh_maven-web-application</sonar.projectKey>
+                <sonar.organization>rajputravisingh</sonar.organization>
+                <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.login>cfb0f9f00c5d23f6b5ffe7c7b032c6ef6b521359</sonar.login>
 		
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
